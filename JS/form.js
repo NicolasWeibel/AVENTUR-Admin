@@ -61,7 +61,8 @@ export const validarFormulario = (
     $validarImagen,
   ]);
 
-  const regexDestinos = /^[a-zA-ZáéíóúüÁÉÍÓÚÜ]+(?: - [a-zA-ZáéíóúüÁÉÍÓÚÜ]+)*$/; // Expresión regular de destinos
+  const regexDestinos =
+    /^[a-zA-ZáéíóúüÁÉÍÓÚÜ]+(?:(?:\s-?\s|\s)[a-zA-ZáéíóúüÁÉÍÓÚÜ]+)*$/;
 
   if (!excursiones && excursiones !== 0) {
     $validarExcursiones.textContent = "Inserte un valor.";
