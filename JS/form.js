@@ -63,7 +63,7 @@ export const validarFormulario = (
 
   const regexDestinos = /^[a-zA-ZáéíóúüÁÉÍÓÚÜ]+(?: - [a-zA-ZáéíóúüÁÉÍÓÚÜ]+)*$/; // Expresión regular de destinos
 
-  if (!excursiones) {
+  if (!excursiones && excursiones !== 0) {
     $validarExcursiones.textContent = "Inserte un valor.";
     $excursiones.focus();
     error = true;
@@ -76,13 +76,13 @@ export const validarFormulario = (
     error = true;
   }
 
-  if (!stock) {
+  if (!stock && stock !== 0) {
     $validarStock.textContent = "Inserte un valor.";
     $stock.focus();
     error = true;
   }
 
-  if (!precio) {
+  if (!precio && precio !== 0) {
     $validarPrecio.textContent = "Inserte un valor.";
     $precio.focus();
     error = true;
@@ -115,13 +115,13 @@ export const validarFormulario = (
     error = true;
   }
 
-  if (!noches) {
+  if (!noches && noches !== 0) {
     $validarNoches.textContent = "Inserte un valor.";
     $noches.focus();
     error = true;
   }
 
-  if (!dias) {
+  if (!dias && dias !== 0) {
     $validarDias.textContent = "Inserte un valor.";
     $dias.focus();
     error = true;
