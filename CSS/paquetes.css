@@ -5,7 +5,7 @@
 /* SECCION PAQUETES TURISTICOS */
 #paquetes-turisticos {
   margin: 20px auto;
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
 }
 
@@ -24,11 +24,12 @@
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
 }
 
 .paquete {
-  min-width: 220px;
-  max-width: 350px;
+  min-width: 330px;
+  max-width: 380px;
   width: 90%;
   display: flex;
   flex-direction: column;
@@ -53,7 +54,8 @@
 
 .contenedor-paquete-texto {
   width: 90%;
-  margin: 8px auto;
+  margin: auto;
+  margin-top: 5px;
 }
 
 .contenedor-recuadros {
@@ -114,7 +116,8 @@
   font-size: 0.75rem; /* Tamaño de fuente para fechas en p */
 }
 
-.paquete-fecha em, .paquete-excursiones em {
+.paquete-fecha em,
+.paquete-excursiones em {
   font-size: 0.75rem;
   font-weight: 500;
   font-style: normal;
@@ -132,9 +135,10 @@
   font-size: 0.8rem;
 }
 
-.paquete-precio, .paquete-botones {
+.paquete-precio,
+.paquete-botones {
   width: 90%;
-  margin: auto;
+  margin: 0 auto;
   text-align: center;
   border-top: 1px solid #dde1e8;
   padding-top: 8px;
