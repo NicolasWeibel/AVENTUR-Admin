@@ -1,0 +1,114 @@
+@import "./normalize.css";
+@import "./general.css";
+@import "./header.css";
+
+/* Estilo para la sección formulario */
+.formulario {
+  width: 80%;
+  max-width: 500px;
+  min-width: 300px;
+  background-color: #fbfbfb;
+  border: 1px solid #0d1b2b;
+  margin: 20px auto;
+  padding: 20px 0;
+  border-radius: 10px;
+}
+
+.formulario ul {
+  margin: 0;
+  padding: 0;
+}
+
+.formulario li {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: #0e0e0e;
+  list-style: none;
+}
+
+input {
+  background-color: #fbfbfb;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #0d1b2b;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding-left: 10px;
+}
+
+input[type="checkbox"] {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.checkbox {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+textarea {
+  background-color: #fbfbfb;
+  width: 100%;
+  height: 150px;
+  border-radius: 5px;
+  border: 1px solid #0d1b2b;
+  resize: none;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+button[type="button"] {
+  height: 45px;
+  margin-top: 10px;
+  background-color: #0d1b2b;
+  color: #fff;
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+button[type="button"]:hover {
+  opacity: 0.95;
+}
+
+.obligatorio,
+.error {
+  color: #ab2e46;
+}
+
+.aviso {
+  font-size: 13px;
+  color: #0e0e0e;
+}
+
+::placeholder {
+  color: #a8a8a8;
+  opacity: 1; /* Para Firefox */
+}
+
+/* Estilo para la sección ubicacion */
+#ubicacion {
+  width: 80%;
+  max-width: 800px;
+  margin: 40px auto;
+  border-radius: 10px;
+}
+
+#ubicacion h2 {
+  margin-bottom: 20px;
+}
+
+.google-map {
+  width: 100%;
+  height: 450px;
+}

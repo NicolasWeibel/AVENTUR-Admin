@@ -1,0 +1,170 @@
+@import "./normalize.css";
+@import "./general.css";
+@import "./header.css";
+
+/* SECCION PAQUETES TURISTICOS */
+#paquetes-turisticos {
+  margin: 20px auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.cabecera-paquetes {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 50px auto;
+}
+
+.cabecera-paquetes h1 {
+  margin: 0;
+}
+
+.contenedor-paquetes {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.paquete {
+  min-width: 220px;
+  max-width: 350px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  color: #434343;
+  transition: box-shadow 0.3s ease-out;
+}
+
+.paquete:hover {
+  box-shadow: 0 0 15px rgba(84, 89, 98, 0.3);
+}
+
+.paquete img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px 8px 0 0;
+}
+
+.contenedor-paquete-texto {
+  width: 90%;
+  margin: 8px auto;
+}
+
+.contenedor-recuadros {
+  display: flex;
+  gap: 5px;
+}
+
+.paquete-id {
+  background-color: #f9bb08;
+  border-radius: 4px;
+  padding: 4px;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.paquete-dias-noches {
+  background-color: #204268;
+  border-radius: 4px;
+  padding: 4px;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.paquete-icono {
+  border-radius: 4px;
+  padding: 4px;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.paquete-icono img {
+  width: 100%;
+  height: 20px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.paquete-titulo h3 {
+  margin-top: 8px;
+  font-weight: 500;
+  font-size: 1.1rem; /* Tamaño de fuente para h3 */
+}
+
+.paquete-fecha {
+  margin-top: 8px;
+  font-size: 0.75rem; /* Tamaño de fuente para fechas en p */
+}
+
+.paquete-excursiones {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  font-size: 0.75rem; /* Tamaño de fuente para fechas en p */
+}
+
+.paquete-fecha em, .paquete-excursiones em {
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.paquete-destinos em,
+.paquete-salida em {
+  font-size: 0.8rem; /* Tamaño de fuente para destinos y salida en p */
+  font-weight: 500;
+  font-style: normal;
+}
+
+.paquete-destinos span,
+.paquete-salida span {
+  font-size: 0.8rem;
+}
+
+.paquete-precio, .paquete-botones {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  border-top: 1px solid #dde1e8;
+  padding-top: 8px;
+  margin-bottom: 8px;
+}
+
+.precio-leyenda {
+  font-size: 0.65rem; /* Tamaño de fuente para leyendas en p */
+}
+
+.precio {
+  margin: 3px 0;
+}
+
+.precio .simbolo {
+  font-size: 0.7rem; /* Tamaño de fuente para símbolos en p */
+}
+
+.precio .cantidad {
+  font-size: 1.2rem; /* Tamaño de fuente para cantidades en p */
+}
+
+@media (min-width: 768px) {
+  .contenedor-paquetes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .contenedor-paquetes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,12 @@
+@import "./normalize.css";
+@import "./general.css";
+@import "./header.css";
+
+/* SECCION PRINCIPAL */
+.mensaje-principal {
+  width: 80%;
+  margin: 10% auto;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
