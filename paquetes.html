@@ -33,7 +33,7 @@
             >
           </div>
           <div v-if="error">
-            <p>Lo sentimos , ........</p>
+            <p>Lo sentimos. Intente recargando la página...</p>
           </div>
           <div v-else>
             <div v-if="cargando">
@@ -123,6 +123,9 @@
                       <em>Saliendo desde: </em
                       ><span>{{paquete.lugar_partida}}</span>
                     </div>
+                    <div class="paquete-salida">
+                      <em>Stock: </em><span>{{paquete.stock}}</span>
+                    </div>
                   </div>
                   <div class="paquete-precio">
                     <div class="precio-leyenda">Precio por persona</div>
@@ -134,7 +137,7 @@
                   <div class="paquete-botones">
                     <a
                       class="btn btn-primary me-2"
-                      :href="'paquete_update.html?id='+ paquete.id"
+                      :href="'paquete-update.html?id='+ paquete.id"
                       >Editar</a
                     >
                     <button
