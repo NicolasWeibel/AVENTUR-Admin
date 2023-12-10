@@ -23,9 +23,9 @@ createApp({
   data() {
     return {
       paquetes: [],
-      url: "http://localhost:5000/paquetes",
+      // url: "http://localhost:5000/paquetes",
       // si el backend esta corriendo local  usar localhost 5000(si no lo subieron a pythonanywhere)
-      // url: "http://marcerda.pythonanywhere.com/paquetes", // si ya lo subieron a pythonanywhere
+      url: "https://nico0401.pythonanywhere.com/paquetes", // si ya lo subieron a pythonanywhere
       error: false,
       cargando: true,
       /*atributos para el guardar los valores del formulario */
@@ -73,6 +73,9 @@ createApp({
                 "es-AR",
                 opciones
               )
+            );
+            paquete.precio = new Intl.NumberFormat("es-ES").format(
+              paquete.precio
             );
           }
 
@@ -140,7 +143,9 @@ createApp({
           redirect: "follow",
         };
         fetch(this.url, options)
-          .then(function () {
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
             alert("Registro grabado");
             window.location.href = "./paquetes.html"; // recarga paquetes.html
           })
