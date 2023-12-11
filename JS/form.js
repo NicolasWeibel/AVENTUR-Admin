@@ -68,6 +68,14 @@ export const validarFormulario = (
     $validarExcursiones.textContent = "Inserte un valor.";
     $excursiones.focus();
     error = true;
+  } else if (excursiones < 0) {
+    $validarExcursiones.textContent = `Inserte un valor positivo.`;
+    $excursiones.focus();
+    error = true;
+  } else if (!Number.isInteger(excursiones)) {
+    $validarExcursiones.textContent = `Inserte un valor entero.`;
+    $excursiones.focus();
+    error = true;
   }
 
   if (imagen.length > 400) {
@@ -81,10 +89,26 @@ export const validarFormulario = (
     $validarStock.textContent = "Inserte un valor.";
     $stock.focus();
     error = true;
+  } else if (stock < 0) {
+    $validarStock.textContent = `Inserte un valor positivo.`;
+    $stock.focus();
+    error = true;
+  } else if (!Number.isInteger(stock)) {
+    $validarStock.textContent = `Inserte un valor entero.`;
+    $stock.focus();
+    error = true;
   }
 
   if (!precio && precio !== 0) {
     $validarPrecio.textContent = "Inserte un valor.";
+    $precio.focus();
+    error = true;
+  } else if (precio < 0) {
+    $validarPrecio.textContent = `Inserte un valor positivo.`;
+    $precio.focus();
+    error = true;
+  } else if (!Number.isInteger(precio)) {
+    $validarPrecio.textContent = `Inserte un valor entero.`;
     $precio.focus();
     error = true;
   }
@@ -120,10 +144,26 @@ export const validarFormulario = (
     $validarNoches.textContent = "Inserte un valor.";
     $noches.focus();
     error = true;
+  } else if (noches < 0) {
+    $validarNoches.textContent = `Inserte un valor positivo.`;
+    $noches.focus();
+    error = true;
+  } else if (!Number.isInteger(noches)) {
+    $validarNoches.textContent = `Inserte un valor entero.`;
+    $noches.focus();
+    error = true;
   }
 
   if (!dias && dias !== 0) {
     $validarDias.textContent = "Inserte un valor.";
+    $dias.focus();
+    error = true;
+  } else if (dias < 0) {
+    $validarDias.textContent = `Inserte un valor positivo.`;
+    $dias.focus();
+    error = true;
+  } else if (!Number.isInteger(dias)) {
+    $validarDias.textContent = `Inserte un valor entero.`;
     $dias.focus();
     error = true;
   }
